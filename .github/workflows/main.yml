@@ -14,9 +14,11 @@ jobs:
 #       - name: Convert Jupyter notebook
 #         run: python ./tests/convert_nb.py
       - name: Test problem 1
-        run: |
-          conda install pytest
-          $CONDA/bin/pytest ./tests/p1_test.py
+        shell: bash -l {0}
+        run: python ./tests/p1_test.py
+#         run: |
+#           conda install pytest
+#           $CONDA/bin/pytest ./tests/p1_test.py
 #       - name: Test problem 2
 #         run: |
 #           $CONDA/bin/pytest ./tests/p2_test.py
