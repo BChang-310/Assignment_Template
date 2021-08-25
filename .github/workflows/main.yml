@@ -16,10 +16,10 @@ jobs:
       - name: Test problem 1
         run: |
           conda install pytest
-          $CONDA/bin/pytest /tests/p1_test.py
+          $CONDA/bin/pytest ./tests/p1_test.py
       - name: Test problem 2
         run: |
-          $CONDA/bin/pytest /tests/p2_test.py
+          $CONDA/bin/pytest ./tests/p2_test.py
       - name: Test problem 3
         run: |
-          $CONDA/bin/pytest /tests/p3_test.py
+          $CONDA/bin/pytest ./tests/p3_test.py
