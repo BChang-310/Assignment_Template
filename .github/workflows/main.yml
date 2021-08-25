@@ -13,7 +13,7 @@ jobs:
           $CONDA/bin/conda env update --file environment.yml --name base
           conda install pytest
       - name: Convert Jupyter notebook
-        run: python /tests/convert_nb.py
+        run: python ./tests/convert_nb.py
       - name: Test problem 1
         run: |
           $CONDA/bin/pytest /tests/p1_test.py
