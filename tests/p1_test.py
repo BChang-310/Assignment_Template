@@ -5,7 +5,7 @@ import os
 
 print(os.getcwd())
 
-with open("../assignment.ipynb") as f:
+with open("./assignment.ipynb") as f:
     exporter = nbconvert.PythonExporter()
     python_file, _ = exporter.from_file(f)
 
