@@ -13,11 +13,14 @@ jobs:
           $CONDA/bin/conda env update --file environment.yml --name base
           conda install pytest
       - name: Test problem 1
+        if: ${{ always() }}
         run: |
           $CONDA/bin/pytest -k prob1 test.py
       - name: Test problem 2
+        if: ${{ always() }}
         run: |
           $CONDA/bin/pytest -k prob2 test.py
       - name: Test problem 3
+        if: ${{ always() }}
         run: |
           $CONDA/bin/pytest -k prob3 test.py
