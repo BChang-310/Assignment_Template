@@ -11,15 +11,13 @@ jobs:
       - name: Install dependencies
         run: |
           $CONDA/bin/conda env update --file environment.yml --name base
-#       - name: Convert Jupyter notebook
-#         run: python ./tests/convert_nb.py
+          conda install pytest
       - name: Test problem 1
         run: |
-          conda install pytest
-          $CONDA/bin/pytest -k prob1 -v test.py
-#       - name: Test problem 2
-#         run: |
-#           $CONDA/bin/pytest ./tests/p2_test.py
-#       - name: Test problem 3
-#         run: |
-#           $CONDA/bin/pytest ./tests/p3_test.py
+          $CONDA/bin/pytest -k prob1 test.py
+      - name: Test problem 2
+        run: |
+          $CONDA/bin/pytest -k prob2 test.py
+      - name: Test problem 3
+        run: |
+          $CONDA/bin/pytest -k prob3 test.py
