@@ -1,6 +1,9 @@
 import unittest
 import nbconvert
 import numpy as np
+import os
+
+print(os.getcwd())
 
 with open("../assignment.ipynb") as f:
     exporter = nbconvert.PythonExporter()
