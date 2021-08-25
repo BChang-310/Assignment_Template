@@ -1,8 +1,10 @@
-from assignment import problem_3
-
+from convert_nb import convert
 import unittest
 
 import numpy as np
+
+convert()
+from assignment import problem_3
 
 class TestSolution(unittest.TestCase):
     def test_prob3(self):
