@@ -1,0 +1,8 @@
+name: test-assignment
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.8.1
+  - numpy>=1.20.0
+  - nbconvert==6.1.0
