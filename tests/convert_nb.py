@@ -3,7 +3,7 @@ import glob
 
 
 def convert():
-    assignment_nb = glob.glob('../*.ipynb')[0]
+    assignment_nb = glob.glob('./*.ipynb')[0]
 
     with open(assignment_nb) as f:
         exporter = nbconvert.PythonExporter()
