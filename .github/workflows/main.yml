@@ -11,16 +11,23 @@ jobs:
       - name: Install dependencies
         run: |
           $CONDA/bin/conda env update --file environment.yml --name base
-          conda install pytest
-      - name: Test problem 1
-        if: ${{ always() }}
-        run: |
-          $CONDA/bin/pytest -k prob1 test.py
-      - name: Test problem 2
-        if: ${{ always() }}
-        run: |
-          $CONDA/bin/pytest -k prob2 test.py
-      - name: Test problem 3
-        if: ${{ always() }}
-        run: |
-          $CONDA/bin/pytest -k prob3 test.py
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: education/autograding@v1
+    
+#          conda install pytest
+#       - name: Test problem 1
+#         if: ${{ always() }}
+#         run: |
+#           $CONDA/bin/pytest -k prob1 test.py
+#       - name: Test problem 2
+#         if: ${{ always() }}
+#         run: |
+#           $CONDA/bin/pytest -k prob2 test.py
+#       - name: Test problem 3
+#         if: ${{ always() }}
+#         run: |
+#           $CONDA/bin/pytest -k prob3 test.py
