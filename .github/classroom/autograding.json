@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Problem 1",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -k prob1 test.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Problem 2",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -k prob2 test.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Problem 3",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -k prob3 test.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}
