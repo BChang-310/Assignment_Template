@@ -17,8 +17,8 @@ jobs:
       - name: Install dependencies
         run: |
           $CONDA/bin/conda env update --file environment.yml --name base
-      - name: Test problem 1
-        if: ${{ always() }}
+      - if: ${{ always() }}
+        name: Test problem 1 
         run: |
           $CONDA/bin/pytest -k prob1 test.py
       - name: Test problem 2
