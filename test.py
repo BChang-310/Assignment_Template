@@ -12,13 +12,13 @@ with open("assignment.py", "w") as f:
 from assignment import *
 
 class TestSolution(unittest.TestCase):
-    def test_prob1(self):
+    def test_prob1_1(self):
         np.testing.assert_string_equal(problem_1(), "Hello, world!")
 
-    def test_prob2(self):
+    def test_prob1_2(self):
         np.testing.assert_equal(problem_2(2, 4), 6)
 
-    def test_prob3(self):
+    def test_prob1_3(self):
         np.testing.assert_equal(problem_3(6), 15)
 
 
