@@ -1,31 +1,22 @@
-on: push
+true: push
 jobs:
-#   conda:
-#     runs-on: "ubuntu-latest"
-#     steps:
-#       - uses: actions/checkout@v2
-
   build:
     name: Autograding
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.8
-      - name: Install dependencies
-        run: |
-          $CONDA/bin/conda env update --file environment.yml --name base
-      - if: ${{ always() }}
-        name: Test problem 1 
-        run: |
-          $CONDA/bin/pytest -k prob1 test.py
-      - name: Test problem 2
-        if: ${{ always() }}
-        run: |
-          $CONDA/bin/pytest -k prob2 test.py
-      - name: Test problem 3
-        if: ${{ always() }}
-        run: |
-          $CONDA/bin/pytest -k prob3 test.py
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: $CONDA/bin/conda env update --file environment.yml --name base
+    - if: ${{ always() }}
+      name: Problem 1.1
+      run: $CONDA/bin/pytest -k prob1_1 test.py
+    - if: ${{ always() }}
+      name: Problem 1.2
+      run: $CONDA/bin/pytest -k prob1_2 test.py
+    - if: ${{ always() }}
+      name: Problem 1.3
+      run: $CONDA/bin/pytest -k prob1_3 test.py
