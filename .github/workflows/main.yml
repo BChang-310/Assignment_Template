@@ -1,4 +1,4 @@
-true: push
+on: push
 jobs:
   build:
     name: Autograding
